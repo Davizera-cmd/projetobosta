@@ -2,91 +2,202 @@
 body, html {
     margin: 0;
     padding: 0;
+    padding-top: 51px;
 }
 
 /* Estilo do cabeçalho */
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 60px; /* Altura fixa para o cabeçalho */
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #3b231b; /* Cor de fundo similar ao cabeçalho na imagem */
-    padding: 44px 20px;
+    padding: 51px 20px;
     box-sizing: border-box;
-    overflow: hidden;
+    z-index: 1000; /* Somente um número, sem 'px' */
 }
 
 /* Ajuste da logo */
 .logo img {
     max-height: 100%; /* Garante que a imagem não ultrapasse a altura do cabeçalho */
-    height: 100px; /* Mantém a proporção da altura */
+    height: 90px; /* Mantém a proporção da altura */
     width: auto; /* Ajusta a largura conforme a altura */
+    margin-left: 20px;
 }
 
 .nav-links {
     display: flex;
     gap: 20px; /* Espaçamento entre os links */
+    margin-left: -850px;
 }
 
 .nav-links a {
     color: #ffffff;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 .user-options {
     display: flex;
     gap: 15px;
+    position: relative;
+    left: -20px;
 }
 
 .user-options a {
     color: #ffffff;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 header a:hover {
     color: #ccc; /* Cor de hover para dar destaque */
 }
 
-/* Estilo do carrossel */
-.carousel {
+/* Estilo para o carrossel de banners */
+.banner-carousel .carousel-wrapper {
     position: relative;
-    max-width: 100%; /* Largura máxima do carrossel */
-    overflow: hidden; /* Oculta partes do carrossel que estão fora da área visível */
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0px 0;
 }
 
-.carousel-item {
-    display: none; /* Inicialmente oculta todos os itens */
-    justify-content: center; /* Centraliza as imagens */
+.banner-carousel .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease; /* Transição suave ao mover */
+    cursor: grab; /* Muda o cursor para indicar que é arrastável */
 }
 
-.carousel-item.active {
-    display: flex; /* Exibe apenas o item ativo */
+.banner-carousel .carousel-slides.dragging {
+    cursor: grabbing; /* Muda o cursor quando está arrastando */
 }
 
-.carousel img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do carrossel */
-    height: auto; /* Mantém a proporção da imagem */
+.banner-carousel .carousel-slides img {
+    width: 100vw;
+    flex: none;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-    color: white;
+/* Estilo das setas do carrossel de banners */
+.banner-carousel .carousel-btn {
+    position: absolute; /* Permite que você posicione livremente */
+    top: 20px; /* Ajusta a distância do topo do banner */
+    right: 20px; /* Ajusta a distância da direita do banner */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    font-size: 30px; /* Tamanho da seta */
+    color: rgb(0, 0, 0); /* Cor da seta, ajuste conforme necessário */
+    cursor: pointer; /* Muda o cursor para indicar um botão clicável */
+    z-index: 10; /* Coloca a seta acima de outros elementos */
+}
+
+/* Para a seta da esquerda */
+.banner-carousel .carousel-btn.prev {
+    right: 60px; /* Ajusta a posição da seta esquerda */
+}
+
+/* Para a seta da direita */
+.banner-carousel .carousel-btn.next {
+    right: 20px; /* Mantém a seta direita no canto superior */
+}
+
+/* Estilo para o carrossel de produtos */
+.product-carousel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.product-carousel h2 {
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+    margin-left: 20px; /* Espaçamento à esquerda */
+    font-family: 'Poppins', sans-serif; /* Define a fonte Poppins */
+    font-size: 40px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #000000; /* Cor do texto, ajuste conforme necessário */
+    padding-bottom: 0px;
+}
+
+.product-carousel .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -50px;
+}
+
+.product-carousel .carousel-slides {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.product-carousel .product-row {
+    display: flex; /* Permite que os produtos fiquem lado a lado */
+}
+
+.product-carousel .product-item {
+    flex: none;
+    width: 350px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 350px; /* Defina um tamanho adequado */
+    height: auto; /* Ajusta automaticamente a altura proporcional */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem no seu contêiner */
+}
+
+.product-carousel .product-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-carousel .product-item p {
+    font-size: 14px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-carousel .buy-btn {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo compartilhado para botões de navegação */
+.product-carousel .carousel-btn {
+    position: absolute; /* Muda a posição para absoluta */
+    top: -440px; /* Centraliza verticalmente */
+    right: 1790px;
+    transform: translateY(-50%); /* Ajusta para que o botão fique centralizado */
+    background: none;
     border: none;
-    padding: 10px;
+    font-size: 30px;
     cursor: pointer;
-    z-index: 1; /* Certifica-se que o botão está acima dos itens do carrossel */
+    z-index: 10;
 }
 
-.carousel-button.prev {
-    left: 10px; /* Distância do botão à esquerda */
+.carousel-controls {
+    display: flex; /* Permite que os botões fiquem lado a lado */
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 10px; /* Adiciona um espaço acima dos botões */
+    position: relative; /* Permite ajustar a posição em relação ao carrossel */
+    bottom: 0; /* Coloca as setas na parte inferior */
 }
 
-.carousel-button.next {
-    right: 10px; /* Distância do botão à direita */
+/* Aumenta o espaço entre as setas, se necessário */
+.product-carousel .carousel-btn.prev {
+    margin-right: 50px; /* Espaço à direita da seta esquerda */
+}
+
+.product-carousel .carousel-btn.next {
+    margin-left: 100px; /* Espaço à esquerda da seta direita */
 }
