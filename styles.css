@@ -1,0 +1,46 @@
+/* Remove margens e paddings padrão do body */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3b231b; /* Cor de fundo similar ao cabeçalho na imagem */
+    padding: 41px 20px;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+.logo img {
+    height: 50px; /* Ajuste conforme o tamanho desejado para a logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Serif', sans-serif;
+}
+
+.user-options {
+    display: flex;
+    gap: 15px;
+}
+
+.user-options a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Serif', sans-serif;
+}
+
+header a:hover {
+    color: #ccc; /* Cor de hover para dar destaque */
+}
