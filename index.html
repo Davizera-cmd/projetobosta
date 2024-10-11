@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Midas</title>
+    <title>Dress Up!</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">
-            <img src="logo.png" alt="Logo da Loja">
+            <img src="imagens/logo.png" alt="Logo da Loja">
         </a>
         <nav class="nav-links">
-            <a href="#comunidade"><B>Comunidade</B></a>
-            <a href="#produtos">Produtos</a>
+            <a href="#comunidade"><b>Comunidade</b></a>
             <a href="#novidades">Novidades</a>
             <a href="#bazar">Midas Bazar</a>
             <a href="#guia">Guia de Medidas</a>
-            <a href="#trocas">Trocas & Devoluções</a>
+            <a href="indexSobre.html">Sobre Nós</a>
         </nav>
         <div class="user-options">
             <a href="#buscar">Buscar</a>
@@ -25,5 +25,21 @@
             <a href="#carrinho">Carrinho</a>
         </div>
     </header>
+
+    <div class="carousel">
+        <div class="carousel-item active">
+            <img src="imagens/imagem1.jpg" alt="Imagem 1">
+        </div>
+        <div class="carousel-item">
+            <img src="imagens/imagem2.jpg" alt="Imagem 2">
+        </div>
+        <div class="carousel-item">
+            <img src="imagens/imagem3.jpg" alt="Imagem 3">
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script src="scripts.js"></script> <!-- Link para o seu arquivo JavaScript -->
 </body>
 </html>
