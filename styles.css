@@ -288,7 +288,6 @@ header a:hover {
     border-radius: 8px; /* Adiciona bordas arredondadas se desejar */
 }
 
-/* Estilo para a faixa de letreiro */
 .marquee {
     background-color: rgb(180, 86, 58); /* Cor de fundo laranja */
     white-space: nowrap; /* Impede a quebra de linha */
@@ -299,6 +298,11 @@ header a:hover {
     align-items: center; /* Centraliza verticalmente o conteúdo */
 }
 
+.marquee-content {
+    display: flex; /* Para alinhar os elementos em linha */
+    animation: marquee 45s linear infinite; /* Animação contínua */
+}
+
 .marquee span {
     display: inline-block; /* Permite que a animação funcione corretamente */
     padding: 0 20px; /* Espaço entre as frases */
@@ -306,15 +310,19 @@ header a:hover {
     color: white; /* Cor do texto */
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    animation: marquee 45s linear infinite; /* Animação contínua */
 }
 
 /* Efeito de animação */
 @keyframes marquee {
     0% {
-        transform: translateX(100%); /* Começa fora da tela à direita */
+        transform: translateX(0); /* Começa na posição inicial */
     }
     100% {
-        transform: translateX(-100%); /* Termina fora da tela à esquerda */
+        transform: translateX(-50%); /* Termina na metade do conteúdo */
     }
+}
+
+/* Para parar a animação ao passar o mouse */
+.marquee:hover .marquee-content {
+    animation-play-state: paused; /* Pausa a animação */
 }
