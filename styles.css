@@ -481,21 +481,27 @@ header a:hover {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 #cookie-consent p {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     font-size: 14px;
     line-height: 1.5;
+    flex: 1; /* Ajusta o parágrafo para ocupar o espaço restante */
 }
 
 #cookie-consent button {
     background-color: #fff;
     border: 1px solid #000;
-    padding: 8px 12px;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 100px;
     cursor: pointer;
     font-size: 14px;
     text-transform: uppercase;
+    margin-left: 20px;
+    box-sizing: border-box;
 }
 
 #cookie-consent button:hover {
