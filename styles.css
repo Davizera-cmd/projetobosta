@@ -10,28 +10,33 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px; 
+    height: 102px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #3b231b; 
-    padding: 51px 20px;
+    padding: 0 20px; /* Remover o padding superior para evitar espaçamento extra */
     box-sizing: border-box;
     z-index: 1000; 
 }
 
 /* Ajuste da logo */
+.logo {
+    display: flex; /* Torna a logo um item flex */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
 .logo img {
     max-height: 100%; 
-    height: 90px; 
+    height: 100px; /* Ajuste a altura conforme necessário */
     width: auto; 
-    margin-left: 20px;
+    margin: 0; /* Remover a margem para evitar deslocamento */
 }
 
 .nav-links {
     display: flex;
     gap: 20px; 
-    margin-left: -850px;
+    margin-left: -800px; /* Ajustar se necessário */
 }
 
 .nav-links a {
@@ -141,11 +146,12 @@ header a:hover {
 
 .product-carousel .product-row {
     display: flex; 
+    gap: 23px;
 }
 
 .product-carousel .product-item {
     flex: none;
-    width: 380px;
+    width: 350px;
     text-align: center;
 }
 
@@ -167,7 +173,7 @@ header a:hover {
 }
 
 .product-carousel .product-item h3 {
-    margin-top: -10px;
+    margin-top: 7px;
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -216,4 +222,99 @@ header a:hover {
     color: #ffffff;
     font-size: 30px; 
     margin: 0 10px; 
+}
+
+.image-container {
+    width: 350px;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+}
+
+/* Definição das imagens */
+.front-image, 
+.back-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out; /* Transição suave para a opacidade */
+}
+
+/* Imagem de trás oculta inicialmente */
+.back-image {
+    opacity: 0; /* Oculta a imagem traseira inicialmente */
+}
+
+/* Troca de imagem apenas quando o mouse está sobre a imagem */
+.image-container:hover .front-image {
+    opacity: 0; /* Oculta a imagem frontal ao passar o mouse */
+}
+
+.image-container:hover .back-image {
+    opacity: 1; /* Mostra a imagem traseira ao passar o mouse */
+}
+
+/* Adiciona a transição e o efeito de scale para a ampliação */
+.image-container img {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.product-item:hover .front-image,
+.product-item:hover .back-image {
+    transform: scale(1.08); /* Amplia a imagem em % */
+}
+
+/* Estilo para a seção de imagens em grade */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha de baixo quando necessário */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    margin: 10px 0; /* Margem acima e abaixo da seção */
+}
+
+.image-item {
+    flex: 0 0 45%; /* Largura de 45% para cada imagem */
+    margin: 10px; /* Margem entre as imagens */
+    text-align: center; /* Centraliza o conteúdo dentro de cada item */
+}
+
+.image-item img {
+    width: 100%; /* Faz com que a imagem preencha todo o espaço do item */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas se desejar */
+}
+
+/* Estilo para a faixa de letreiro */
+.marquee {
+    background-color: rgb(180, 86, 58); /* Cor de fundo laranja */
+    white-space: nowrap; /* Impede a quebra de linha */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o contêiner */
+    position: relative; /* Para o uso do efeito de animação */
+    height: 72px; /* Altura da faixa */
+    display: flex; /* Para alinhar os elementos em linha */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+}
+
+.marquee span {
+    display: inline-block; /* Permite que a animação funcione corretamente */
+    padding: 0 20px; /* Espaço entre as frases */
+    font-size: 34px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    animation: marquee 45s linear infinite; /* Animação contínua */
+}
+
+/* Efeito de animação */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); /* Começa fora da tela à direita */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina fora da tela à esquerda */
+    }
 }
