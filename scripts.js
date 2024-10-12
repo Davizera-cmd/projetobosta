@@ -28,3 +28,20 @@ showBanner(bannerIndex);
 
 // Remover eventos de arrasto
 // Não há necessidade de lidar com eventos de mouse ou toque
+
+// Pausar a animação ao passar o mouse
+const marquee = document.getElementById('marquee');
+
+marquee.addEventListener('mouseover', () => {
+    const spans = marquee.querySelectorAll('span');
+    spans.forEach(span => {
+        span.style.animationPlayState = 'paused';
+    });
+});
+
+marquee.addEventListener('mouseout', () => {
+    const spans = marquee.querySelectorAll('span');
+    spans.forEach(span => {
+        span.style.animationPlayState = 'running';
+    });
+});
