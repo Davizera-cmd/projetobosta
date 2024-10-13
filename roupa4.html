@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icone.png">
+    <title>Dress Up!</title>
+    <link rel="stylesheet" href="roupas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="imagens/logo2.png" alt="Logo da Loja">
+        </a>
+        <nav class="nav-links">
+            <a href="#comunidade">Comunidade</a>
+            <a href="#novidades">Novidades</a>
+            <a href="#bazar">Midas Bazar</a>
+            <a href="#guia">Guia de Medidas</a>
+            <a href="indexSobre.html">Sobre Nós</a>
+        </nav>
+        <div class="user-options">
+            <a href="#buscar">Buscar</a>
+            <a href="#login">Login</a>
+            <a href="#carrinho">Carrinho</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="product-images">
+                <button class="arrow left" onclick="changeImage(-1)">&#10094;</button>
+                <img id="productImage" src="1.png" alt="Roupa 1">
+                <button class="arrow right" onclick="changeImage(1)">&#10095;</button>
+            </div>
+            <div class="product-details">
+                <h1>Nome da Roupa</h1>
+                <p>Descrição detalhada da roupa, incluindo material, cuidados e outras informações importantes.</p>
+                <p class="price">R$ 99,90</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>

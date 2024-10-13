@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icone.png">
+    <title>Dress Up!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="imagens/logo2.png" alt="Logo da Loja">
+        </a>
+        <nav class="nav-links">
+            <a href="#comunidade">Comunidade</a>
+            <a href="#novidades">Novidades</a>
+            <a href="#bazar">Midas Bazar</a>
+            <a href="#guia">Guia de Medidas</a>
+            <a href="indexSobre.html">Sobre Nós</a>
+        </nav>
+        <div class="user-options">
+            <a href="#buscar">Buscar</a>
+            <a href="#login">Login</a>
+            <a href="#carrinho">Carrinho</a>
+        </div>
+    </header>
+
+    <!-- Carrossel de Banner -->
+    <section class="banner-carousel">
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev" onclick="prevBanner()">←</button>
+            <div class="carousel-slides" id="banner-slides">
+                <img src="imagens/carousel/banners/teste.webp" alt="Banner 1">
+                <img src="imagens/carousel/banners/imagem2.png" alt="Banner 2">
+                <img src="imagens/carousel/banners/imagem3.png" alt="Banner 3">
+            </div>
+            <button class="carousel-btn next" onclick="nextBanner()">→</button>
+        </div>
+    </section>
+
+   <!-- Carrossel de Produtos -->
+<section class="product-carousel" id="product-carousel">
+    <h2>Mais Vendidos:</h2>
+    <div class="carousel-wrapper">
+        <div class="carousel-slides" id="product-slides">
+            <div class="product-row">
+                <div class="product-item">
+                    <a href="roupa1.html" class="image-link">
+                    <div class="image-container">
+                        <img src="imagens/carousel/camisas/azul.webp" alt="Gin OW T-shirt" class="front-image">
+                        <img src="imagens/carousel/camisas/azul2.webp" alt="Gin OW T-shirt" class="back-image">
+                    </div>
+                </a>
+                    <a href="#" class="product-link">
+                        <h3>Gin OW T-shirt</h3>
+                        <p>R$199,90</p>
+                    </a>
+                    <a href="#" class="buy-btn">Comprar</a>
+                </div>
+                <div class="product-item">
+                    <a href="#" class="image-link">
+                        <div class="image-container">
+                            <img src="imagens/carousel/camisas/bege.webp" alt="Gin OW T-shirt" class="front-image">
+                            <img src="imagens/carousel/camisas/bege2.webp" alt="Gin OW T-shirt" class="back-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-link">
+                        <h3>Boxy Navy</h3>
+                        <p>R$219,90</p>
+                    </a>
+                    <a href="#" class="buy-btn">Comprar</a>
+                </div>
+                <div class="product-item">
+                    <a href="#" class="image-link">
+                        <div class="image-container">
+                            <img src="imagens/carousel/camisas/preta.webp" alt="Gin OW T-shirt" class="front-image">
+                            <img src="imagens/carousel/camisas/preta2.webp" alt="Gin OW T-shirt" class="back-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-link">
+                        <h3>Cup T-shirt</h3>
+                        <p>R$199,90</p>
+                    </a>
+                    <a href="#" class="buy-btn">Comprar</a>
+                </div>
+                <div class="product-item">
+                    <a href="#" class="image-link">
+                        <div class="image-container">
+                            <img src="imagens/carousel/camisas/verde.webp" alt="Gin OW T-shirt" class="front-image">
+                            <img src="imagens/carousel/camisas/verde2.webp" alt="Gin OW T-shirt" class="back-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-link">
+                        <h3>Gin B T-shirt</h3>
+                        <p>R$199,90</p>
+                    </a>
+                    <a href="#" class="buy-btn">Comprar</a>
+                </div>
+                <div class="product-item">
+                    <a href="#" class="image-link">
+                        <div class="image-container">
+                            <img src="imagens/carousel/camisas/flor.webp" alt="Gin OW T-shirt" class="front-image">
+                            <img src="imagens/carousel/camisas/flor2.webp" alt="Gin OW T-shirt" class="back-image">
+                        </div>
+                    </a>
+                    <a href="#" class="product-link">
+                        <h3>Flower T-Shirt</h3>
+                        <p>R$199,90</p>
+                    </a>
+                    <a href="#" class="buy-btn">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-controls">
+        <button class="carousel-btn prev" onclick="prevProduct()">←</button>
+        <button class="carousel-btn next" onclick="nextProduct()">→</button>
+    </div>
+</section>
+
+<!-- Faixa de Frete Grátis -->
+<div class="marquee" id="marquee">
+    <div class="marquee-content">
+        <span>FRETE GRÁTIS A PARTIR DE R$190,90</span>
+        <span>FRETE GRÁTIS A PARTIR DE R$190,90</span>
+        <span>FRETE GRÁTIS A PARTIR DE R$190,90</span>
+        <span>FRETE GRÁTIS A PARTIR DE R$190,90</span>
+        <span>FRETE GRÁTIS A PARTIR DE R$190,90</span> <!-- Duplicar a frase -->
+        <span>FRETE GRÁTIS A PARTIR DE R$190,90</span> <!-- Duplicar a frase -->
+    </div>
+</div>
+
+<!-- Seção de Imagens em Grade -->
+<section class="image-grid">
+    <div class="image-item">
+        <img src="imagens/4 imagens/imagem1.webp" alt="Imagem 1">
+    </div>
+    <div class="image-item">
+        <img src="imagens/4 imagens/imagem2.webp" alt="Imagem 2">
+    </div>
+    <div class="image-item">
+        <img src="imagens/4 imagens/imagem3.webp" alt="Imagem 3">
+    </div>
+    <div class="image-item">
+        <img src="imagens/4 imagens/imagem4.webp" alt="Imagem 4">
+    </div>
+</section>
+
+ <!-- Seção de Roupas -->
+ <section class="product-secao" id="product-secao">
+    <h2>Para você:</h2>
+    <div class="secao-wrapper">
+        <div class="secao-slides" id="secao-slides">
+            <div class="secao-row">
+
+
+                <!-- PRIMEIRA FILEIRA-->
+                <div class="secao-item">
+                <a href="#" class="secao-link">
+                    <div class="secao-container">
+                        <img src="imagens/roupas/camisa1-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                        <img src="imagens/roupas/camisa1-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                    </div>
+                </a>
+                    <a href="#" class="secao-link">
+                        <h3>Camisa1-1</h3>
+                        <p>R$199,90</p>
+                    </a>
+                    <a href="#" class="secaobuy-btn">Comprar</a>
+                </div>
+                <div class="secao-item">
+                    <a href="#" class="secao-link">
+                        <div class="secao-container">
+                            <img src="imagens/roupas/camisa2-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                            <img src="imagens/roupas/camisa2-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                        </div>
+                    </a>
+                        <a href="#" class="secao-link">
+                            <h3>Camisa2-2</h3>
+                            <p>R$199,90</p>
+                        </a>
+                        <a href="#" class="secaobuy-btn">Comprar</a>
+                    </div>
+                    <div class="secao-item">
+                        <a href="#" class="secao-link">
+                            <div class="secao-container">
+                                <img src="imagens/roupas/camisa3-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                                <img src="imagens/roupas/camisa3-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                            </div>
+                        </a>
+                            <a href="#" class="secao-link">
+                                <h3>Camisa3-3</h3>
+                                <p>R$199,90</p>
+                            </a>
+                            <a href="#" class="secaobuy-btn">Comprar</a>
+                        </div>
+                        <div class="secao-item">
+                            <a href="#" class="secao-link">
+                                <div class="secao-container">
+                                    <img src="imagens/roupas/camisa4-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                                    <img src="imagens/roupas/camisa4-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                                </div>
+                            </a>
+                                <a href="#" class="secao-link">
+                                    <h3>Camisa4-4</h3>
+                                    <p>R$199,90</p>
+                                </a>
+                                <a href="#" class="secaobuy-btn">Comprar</a>
+                            </div>
+                            <div class="secao-item">
+                            <a href="#" class="secao-link">
+                                <div class="secao-container">
+                                    <img src="imagens/roupas/camisa4-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                                    <img src="imagens/roupas/camisa4-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                                </div>
+                            </a>
+                                <a href="#" class="secao-link">
+                                    <h3>Camisa5-5</h3>
+                                    <p>R$199,90</p>
+                                </a>
+                                <a href="#" class="secaobuy-btn">Comprar</a>
+                            </div>
+
+                            <!-- SEGUNDA FILEIRA-->
+                            <div class="secao-item">
+                                <a href="#" class="secao-link">
+                                    <div class="secao-container">
+                                        <img src="imagens/roupas/camisa4-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                                        <img src="imagens/roupas/camisa4-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                                    </div>
+                                </a>
+                                    <a href="#" class="secao-link">
+                                        <h3>Camisa6-6</h3>
+                                        <p>R$199,90</p>
+                                    </a>
+                                    <a href="#" class="secaobuy-btn">Comprar</a>
+                                </div>
+                                <div class="secao-item">
+                                    <a href="#" class="secao-link">
+                                        <div class="secao-container">
+                                            <img src="imagens/roupas/camisa4-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                                            <img src="imagens/roupas/camisa4-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                                        </div>
+                                    </a>
+                                        <a href="#" class="secao-link">
+                                            <h3>Camisa7-7</h3>
+                                            <p>R$199,90</p>
+                                        </a>
+                                        <a href="#" class="secaobuy-btn">Comprar</a>
+                                    </div>
+                                    <div class="secao-item">
+                                        <a href="#" class="secao-link">
+                                            <div class="secao-container">
+                                                <img src="imagens/roupas/camisa4-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                                                <img src="imagens/roupas/camisa4-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                                            </div>
+                                        </a>
+                                            <a href="#" class="secao-link">
+                                                <h3>Camisa8-8</h3>
+                                                <p>R$199,90</p>
+                                            </a>
+                                            <a href="#" class="secaobuy-btn">Comprar</a>
+                                        </div>
+                                        <div class="secao-item">
+                                            <a href="#" class="secao-link">
+                                                <div class="secao-container">
+                                                    <img src="imagens/roupas/camisa4-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                                                    <img src="imagens/roupas/camisa4-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                                                </div>
+                                            </a>
+                                                <a href="#" class="secao-link">
+                                                    <h3>Camisa9-9</h3>
+                                                    <p>R$199,90</p>
+                                                </a>
+                                                <a href="#" class="secaobuy-btn">Comprar</a>
+                                            </div>
+                                            <div class="secao-item">
+                                                <a href="#" class="secao-link">
+                                                    <div class="secao-container">
+                                                        <img src="imagens/roupas/camisa4-1.webp" alt="Gin OW T-shirt" class="front-image-secao">
+                                                        <img src="imagens/roupas/camisa4-2.webp" alt="Gin OW T-shirt" class="back-image-secao">
+                                                    </div>
+                                                </a>
+                                                    <a href="#" class="secao-link">
+                                                        <h3>Camisa10-10</h3>
+                                                        <p>R$199,90</p>
+                                                    </a>
+                                                    <a href="#" class="secaobuy-btn">Comprar</a>
+                                                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-controls">
+        <button class="carousel-btn prev" onclick="prevProduct()">←</button>
+        <button class="carousel-btn next" onclick="nextProduct()">→</button>
+    </div>
+</section>
+
+<a href="https://wa.me/48984588412" class="whatsapp-icon" target="_blank" title="Suporte via WhatsApp">
+    <img src="whatsapp-icon.png" alt="WhatsApp">
+</a>
+<!-- COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE-->
+<div class="cookieWrapper">
+    <img src="cookie.png" alt="Cookie">
+    <div class="cookieContent">
+        <h2>Consentimento de Cookies</h2>
+        <p>Esse site usa cookies para coletar seus dados mais íntimos e lhe oferecer uma melhor experiência em nosso site!</p>
+        <div class="cookieButtons">
+            <button class="cookieItem"><b>Aceitar e Fechar</b></button>
+            <a href="#" class="cookieItem">Saiba mais</a>
+        </div>
+    </div>
+</div>
+<!-- COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE-->
+    <script src="scripts.js"></script>
+        
+</body>
+</html>
