@@ -1,0 +1,77 @@
+/* COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+.cookieWrapper {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    max-width: 365px;
+    background: #ffffff;
+    padding: 25px 25px 30px 25px;
+    border-radius: 15px;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+    text-align: center;
+    border: 3px solid #FCBA7F;
+    z-index: 9999;
+  }
+
+  .cookieWrapper h2 {
+    margin-top: 5px; /* Reduza a margem superior */
+    margin-bottom: 5px; /* Mantenha uma margem inferior pequena */
+    font-size: 1.5em; /* Tamanho da fonte do título */
+    font-family: 'Poppins', sans-serif;
+}
+.cookieWrapper p {
+    font-family: 'Poppins', sans-serif; /* Fonte do parágrafo */
+}
+  .cookieWrapper.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+  }
+  ::selection {
+    color: #fff;
+    background: #FCBA7F;
+  }
+  .cookieWrapper img {
+    max-width: 90px;
+  }
+  .cookieContent header {
+    font-size: 25px;
+    font-weight: 50;
+  }
+  .cookieContent {
+    margin-top: 10px;
+  }
+  .cookieContent p {
+    color: #858585;
+    margin: 5px 0 20px 0;
+  }
+  .cookieContent .cookieButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cookieButtons button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #FCBA7F;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .cookieButtons button:hover {
+    transform: scale(0.97);
+  }
+  .cookieButtons .cookieItem {
+    margin: 0 10px;
+  }
+  .cookieButtons a {
+    color: #FCBA7F;
+    font-family: 'Poppins', sans-serif;
+  }
+  /* COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+  
