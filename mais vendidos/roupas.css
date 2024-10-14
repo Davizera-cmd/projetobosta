@@ -1,0 +1,444 @@
+/* Remove margens e paddings padrão do body */
+body, html {
+    margin: 0;
+    padding: 0;
+    padding-top: 51px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 102px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3b231b; 
+    padding: 0 20px; /* Remover o padding superior para evitar espaçamento extra */
+    box-sizing: border-box;
+    z-index: 1000; 
+}
+
+/* Ajuste da logo */
+.logo {
+    display: flex; /* Torna a logo um item flex */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.logo img {
+    max-height: 100%; 
+    height: 100px; /* Ajuste a altura conforme necessário */
+    width: auto; 
+    margin: 0; /* Remover a margem para evitar deslocamento */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; 
+    margin-left: -800px; /* Ajustar se necessário */
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.user-options {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    left: -20px;
+}
+
+.user-options a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ccc; 
+}
+
+.product-images {
+    display: flex; /* Flex para alinhar imagens lado a lado */
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.product-image {
+    width: 750px; /* Largura fixa para as imagens, ajuste conforme necessário */
+    height: 750px; /* Altura fixa para as imagens, ajuste conforme necessário */
+    object-fit: cover; /* Corta a imagem para caber na área definida */
+}
+
+.product-details {
+    max-width: 600px; /* Largura máxima para o layout */
+    margin: auto; /* Centraliza o conteúdo */
+    padding: 20px; /* Espaçamento interno */
+    font-family: 'Arial', sans-serif; /* Fonte para o texto */
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-title {
+    font-size: 45px; /* Tamanho do título */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-price {
+    font-size: 25px; /* Tamanho do preço */
+    color: #000000; /* Cor do preço */
+    margin-bottom: 5px; /* Espaço abaixo do preço */
+    font-family: 'Poppins', sans-serif;
+}
+
+.installments {
+    font-size: 14px; /* Tamanho das parcelas */
+    margin-bottom: -3px; /* Espaço abaixo das parcelas */
+    font-family: 'Poppins', sans-serif;
+    color: #d89066;;
+}
+
+.shipping-info {
+    font-size: 14px; /* Tamanho da informação de frete */
+    color: #000000; /* Cor do texto */
+    margin-bottom: 10px; /* Espaço abaixo da informação de frete */
+    font-family: 'Poppins', sans-serif;
+}
+
+.frete-info {
+    margin-top: 20px; /* Ajuste a distância conforme necessário */
+}
+
+
+.size-selection {
+    margin: 20px 0; /* Margem acima e abaixo */
+    font-family: 'Poppins', sans-serif;
+}
+
+.tamanho {
+    margin-bottom: 5px;
+}
+
+.guia {
+    margin-bottom: 18px;
+}
+
+.size-options {
+    display: flex; /* Alinha as opções de tamanho em linha */
+    gap: 10px; /* Espaço entre as opções */
+    font-family: 'Poppins', sans-serif;
+}
+
+.size-option {
+    padding: 5px 5px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    box-shadow: 0 0 0 0.5px #6e6e6e; /* Sombra fina em torno do botão */
+    border-radius: 0px; /* Bordas arredondadas */
+    font-size: 12px;
+    width: 29px; /* Largura fixa */
+    height: 28px; /* Altura fixa */
+    cursor: pointer; /* Muda o cursor ao passar sobre */
+    background-color: #ffffff; /* Fundo do botão */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave ao mudar de cor */
+    font-family: 'Poppins', sans-serif;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    display: flex; /* Ativa o flexbox */
+}
+
+.size-option:hover {
+    background-color: #ffffff; /* Cor ao passar o mouse */
+    font-family: 'Poppins', sans-serif;
+    color: #c4c2c2;
+}
+
+.size-option.selected {
+    background-color: #c76a48; /* Cor de fundo do botão selecionado */
+    border-color: #e49c73; /* Borda do botão selecionado */
+}
+
+.quantity-button {
+    padding: 10px 15px; /* Espaçamento interno dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #3b231b; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.quantity-selection {
+    display: flex; /* Alinha os itens em uma linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaço entre os botões e o input */
+}
+
+.quantity-input {
+    width: 50px; /* Largura do input */
+    height: 40px; /* Altura do input */
+    text-align: center; /* Centraliza o texto dentro do input */
+    border: 1px solid #ccc; /* Borda do input */
+    border-radius: 5px; /* Bordas arredondadas */
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: none; /* Chrome, Safari e Opera */
+    appearance: none; /* Padrão */
+}
+
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari e Opera */
+    margin: 0; /* Remove a margem */
+}
+
+.quantity-button {
+    padding: 10px 15px; /* Espaçamento interno dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 0px; /* Bordas arredondadas */
+    background-color: #3b231b; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.quantity-button:hover {
+    background-color: #e49c73; /* Cor ao passar o mouse */
+}
+
+.decrement, .increment {
+    display: flex; /* Permite centralizar o texto no botão */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 40px; /* Altura igual ao input */
+    font-family: 'Poppins', sans-serif;
+}
+
+.buy-button {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 13px;
+    flex-grow: 1; /* Faz o botão "Comprar" ocupar o espaço restante */
+    height: 40px; /* Altura do botão "Comprar" */
+    background-color: #3b231b; /* Cor de fundo do botão Comprar */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buy-button:hover {
+    background-color: #e49c73; /* Cor ao passar o mouse no botão Comprar */
+    font-family: 'Poppins', sans-serif;
+}
+
+.shipping-method {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-container {
+    display: flex; /* Mantém o input e o botão em linha */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 10px; /* Espaço entre o input e o botão */
+    width: 100%; /* Faz com que a div ocupe todo o espaço disponível */
+    font-family: 'Poppins', sans-serif;
+}
+
+.cep-input {
+    flex: 1; /* Faz o input ocupar o espaço disponível */
+    padding: 10px; /* Espaçamento interno para o input */
+    border: 1px solid #ccc; /* Borda do input */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-family: 'Poppins', sans-serif;
+}
+
+.calculate-button {
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: background-color 0.3s;
+    background-color: #3b231b; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre */
+    font-family: 'Poppins', sans-serif;
+}
+
+.calculate-button:hover {
+    background-color: #e49c73; /* Cor ao passar o mouse no botão Comprar */
+    font-family: 'Poppins', sans-serif;
+}
+
+.unknown-cep {
+    display: block; /* Ocupa toda a linha */
+    margin-top: 10px; /* Espaço acima */
+    color: #000000; /* Cor do texto */
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.product-description {
+    margin: 20px 0; /* Margem acima e abaixo */
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-description h2 {
+    font-size: 20px; /* Tamanho do título da descrição */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-description p {
+    font-size: 14px; /* Tamanho do texto da descrição */
+    color: #555; /* Cor do texto */
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: absolute; /* Permite mover o contêiner livremente */
+    top: 490px; /* Distância do topo da página */
+    left: 1700px; /* Distância da esquerda da página */
+    transform: translate(-50%, -50%); /* Para centralizar no ponto especificado */
+    z-index: 10; /* Coloca o contêiner acima de outros elementos se necessário */
+}
+
+.product-title,
+.product-price,
+.installments,
+.shipping-info,
+.size-selection,
+.quantity-selection {
+    white-space: nowrap; /* Impede que o texto quebre linhas */
+}
+
+.size-option.selected {
+    background-color: #e2e0e0; /* Cor de fundo do botão selecionado */
+    color: rgb(0, 0, 0); /* Cor do texto do botão selecionado */
+    border-color: #000000; /* Cor da borda do botão selecionado */
+    border: none; /* Remove a borda */
+    box-shadow: 0 0 0 0.7px hsl(0, 0%, 0%); /* Sombra fina em torno do botão */
+}
+
+.size-guide {
+    color: inherit; /* Mantém a cor do texto pai */
+    text-decoration: underline; /* Mantém o sublinhado */
+    cursor: pointer; /* Para indicar que é um link */
+    font-size: 13px;
+}
+
+.product-image3 {
+        position: absolute; /* Permite mover o contêiner livremente */
+        top: 600px; /* Distância do topo da página */
+        left: 750px; /* Distância da esquerda da página */
+        transform: translate(-50%, -50%); /* Para centralizar no ponto especificado */
+        z-index: 10; /* Coloca o contêiner acima de outros elementos se necessário */
+        height: auto;
+        width: 750px;
+        cursor: pointer;
+    }
+
+    .product-image4 {
+        position: absolute; /* Permite mover o contêiner livremente */
+        top: 600px; /* Distância do topo da página */
+        left: 375px; /* Distância da esquerda da página */
+        transform: translate(-50%, -50%); /* Para centralizar no ponto especificado */
+        z-index: 10; /* Coloca o contêiner acima de outros elementos se necessário */
+        height: auto;
+        width: 750px;
+        cursor: pointer;
+    }
+
+    /* Modal para visualização em tela cheia */
+    .modal {
+        display: none; /* Inicialmente escondido */
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 9999;
+    }
+    
+    .modal.show {
+        display: flex; /* Exibe o modal */
+        opacity: 1;
+        pointer-events: auto; /* Permite interações */
+    }
+    
+    .close {
+        position: absolute;
+        top: 20px; /* Distância do topo */
+        right: 20px; /* Distância da direita */
+        color: white; /* Cor do texto */
+        font-size: 30px; /* Tamanho do texto */
+        cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+        z-index: 101; /* Garante que fique acima do modal */
+        font-family: 'Nome da Fonte', sans-serif; /* Substitua 'Nome da Fonte' pela fonte desejada */
+        font-weight: bold; /* Você pode ajustar o peso da fonte conforme necessário */
+    }
+    
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        margin: auto; /* Para centralizar */
+        display: block;
+        opacity: 0; /* Começa invisível */
+        transition: opacity 0.3s ease;
+        transform: translate(-50%, -50%); /* Centraliza no ponto especificado */
+        position: absolute; /* Isso ajuda na centralização */
+        top: 50%; /* Centro vertical */
+        left: 50%; /* Centro horizontal */
+    }
+    
+    .modal.show .modal-content {
+        opacity: 1; /* Alcança a opacidade total ao entrar */
+        animation: zoomInAndCenter 0.3s forwards; /* Animação de entrada */
+    }
+    
+    .modal.hide .modal-content {
+        animation: zoomOutAndCenter 0.3s forwards; /* Animação de saída */
+        opacity: 0; /* Diminui a opacidade ao sair */
+    }
+    
+    @keyframes zoomInAndCenter {
+        from {
+            transform: translate(-50%, -50%) scale(0.5); /* Inicia centralizado e menor */
+        }
+        to {
+            transform: translate(-50%, -50%) scale(1); /* Centralizado e em escala total */
+        }
+    }
+    
+    @keyframes zoomOutAndCenter {
+        from {
+            transform: translate(-50%, -50%) scale(1); /* Inicia na escala total */
+        }
+        to {
+            transform: translate(-50%, -50%) scale(0.5); /* Diminui e centraliza */
+        }
+    }
+
+    .grab {
+        cursor: grab; /* Cursor de pegar */
+    }
+    
+    .grabbing {
+        cursor: grabbing; /* Cursor de pegando */
+    }
+    

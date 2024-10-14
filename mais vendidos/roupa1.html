@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../icones/favicon.png">
+    <title>Dress Up!</title>
+    <link rel="stylesheet" href="roupas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">
+            <img src="../logo.png" alt="Logo da Loja">
+        </a>
+        <nav class="nav-links">
+            <a href="#comunidade">Comunidade</a>
+            <a href="#novidades">Novidades</a>
+            <a href="#bazar">Midas Bazar</a>
+            <a href="#guia">Guia de Medidas</a>
+            <a href="../sobrenos/sobre.html">Sobre Nós</a>
+        </nav>
+        <div class="user-options">
+            <a href="#buscar">Buscar</a>
+            <a href="#login">Login</a>
+            <a href="#carrinho">Carrinho</a>
+        </div>
+    </header>
+
+<div class="product-container">
+    <div class="product-images">
+          <img src="imagens-roupas/roupa1.webp" alt="Camisa - Frente" class="product-image" onclick="openFullscreen(this.src)">
+          <img src="imagens-roupas/roupa2.webp" alt="Camisa - Verso" class="product-image" onclick="openFullscreen(this.src)">
+
+            <div class="product-image3">
+                <img src="imagens-roupas/roupa3.webp" alt="Camisa - Verso" class="product-image3" onclick="openFullscreen(this.src)">
+            </div>
+
+            <div class="product-image4">
+                <img src="imagens-roupas/roupa4.webp" alt="Camisa - Verso" class="product-image4" onclick="openFullscreen(this.src)">
+            </div>
+                    <!-- Modal de visualização em tela cheia -->
+                <div id="fullscreenModal" class="modal" onclick="closeFullscreen()">
+                     <span class="close" onclick="closeFullscreen()">X</span>
+                     <img class="modal-content" id="fullscreenImage">
+                </div>
+
+     </div>
+
+
+        <div class="container">
+        <div class="product-details">
+            <h1 class="product-title">Gin OW T-shirt</h1>
+            <div class="product-price">R$199,90</div>
+            <div class="installments">6 x de R$33,32 sem juros</div>
+            <a href="#" class="shipping-info">Ver mais detalhes</a>
+        <div class="frete-info">
+            <div class="shipping-info"><span style="color: #d89066;">Frete grátis</span> a partir de R$190,90</div>
+        </div>
+        
+            <div class="size-selection">
+                <div class="tamanho">
+                <span>Tamanho: <span id="selected-size" style="font-weight: bold;">Nenhum</span></span>
+               </div>
+                <div class="size-options">
+                    <button class="size-option">S</button>
+                    <button class="size-option">M</button>
+                    <button class="size-option">L</button>
+                    <button class="size-option">XL</button>
+                </div>
+            </div>
+            <div class="guia">
+                <a href="#" class="size-guide">Guia de medidas</a>
+            </div>
+        
+            <div class="quantity-selection">
+                <button class="decrement quantity-button">-</button>
+                <input type="number" value="1" class="quantity-input" />
+                <button class="increment quantity-button">+</button>
+                <button class="buy-button"><b>Comprar</b></button>
+            </div>
+        
+            <div class="shipping-method">
+                <span><b>Meios de envio</b></span>
+                <div class="input-container">
+                    <input type="text" placeholder="Seu CEP" class="cep-input" />
+                    <button class="calculate-button">Calcular</button>
+                </div>
+                <a href="#" class="unknown-cep">Não sei meu CEP</a>
+            </div>
+        
+            <div class="product-description">
+                <h2>Descrição</h2>
+                <p>Se os planos do seu fim de semana incluem bar, festa ou qualquer outro lugar pra tomar aquele drink gostosinho, essa camiseta é sua melhor parceira. Com uma modelagem Oversized, essa camiseta traz um visual despojado e moderno, perfeito pra qualquer rolê.</p>
+            </div>
+        </div>
+    </div>
+    <script src="roupas.js"></script>
+</body>
+</html>      
