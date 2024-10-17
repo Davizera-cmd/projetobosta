@@ -72,6 +72,7 @@ header a:hover {
     padding-top: 20px; 
     margin-bottom: 10px; /* Adicione isto para controlar o espaço abaixo do título */
     font-family: 'Poppins', sans-serif;
+    margin-top: -15px;
 }
 
 .descricao-dressup {
@@ -84,18 +85,18 @@ header a:hover {
     text-align: justify; 
     margin: 0 auto; /* Ajuste isso para centralizar sem margens verticais */
     margin-left: 100px; 
-    margin-top: 0;
+    margin-top: -15px;
 }
 
 .imagem-borda {
   position: absolute; /* Permite posicionamento livre */
-  top: 200px; /* Ajuste a partir do topo */
+  top: 170px; /* Ajuste a partir do topo */
   right: 140px; /* Ajuste a partir da direita */
-  width: 650px; /* Ajuste o tamanho da imagem */
+  width: 550px; /* Ajuste o tamanho da imagem */
   height: auto;
   border: 5px solid #3b231b;
    border-radius: 10px;
-  z-index: 1000; /* Certifique-se de que está acima de outros elementos */
+  z-index: 100; /* Certifique-se de que está acima de outros elementos */
 }
 
 /* Espaçamento entre os parágrafos */
@@ -181,4 +182,204 @@ header a:hover {
 
   .imagem-descricao img {
     pointer-events: none; /* Impede interações com a imagem */
+}
+
+footer {
+  display: flex; /* Usar Flexbox para alinhar os elementos */
+  justify-content: space-between; /* Espaçar os elementos */
+  align-items: flex-start; /* Alinhar os elementos ao topo */
+  background-color: #000000;
+  color: #fff;
+  padding: 30px 0;
+  position: relative; /* Necessário para posicionamento absoluto dos filhos */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-section {
+  width: 100%;
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section.siga-nos {
+  display: block; /* Garantir que o título e os ícones fiquem em blocos separados */
+  text-align: center; /* Centralizar o conteúdo */
+  margin-left: -40px;
+}
+
+.footer-section.siga-nos h4 {
+  margin-bottom: 10px; /* Espaçamento entre o título e os ícones */
+}
+
+.footer-section.siga-nos a img {
+  margin-right: 10px; /* Reduzir a margem direita para aproximar os ícones */
+  vertical-align: middle; /* Alinhar verticalmente os ícones ao meio */
+  width: 50px; /* Ajustar a largura do ícone */
+  height: auto; /* Ajustar a altura do ícone */
+}
+
+.footer-section.siga-nos a[href*="instagram"] img {
+  margin-left: -5px; /* Mover o ícone do Instagram um pouco para a esquerda */
+}
+.footer-section.siga-nos a[href*="facebook"] img {
+  margin-left: -9px; /* Mover o ícone do Instagram um pouco para a esquerda */
+}
+
+.footer-section.siga-nos a img:last-child {
+  margin-right: 0px; /* Remover a margem direita do último ícone */
+}
+
+.footer-section.metodos-pagamento img {
+  margin-right: 3px; /* Reduzir a margem direita para aproximar os ícones */
+  vertical-align: middle; /* Alinhar verticalmente os ícones ao meio */
+  width: 40px;
+  height: auto;
+}
+
+.footer-section.metodos-pagamento img:last-child {
+  margin-right: 0; /* Remover a margem direita do último ícone */
+}
+
+.footer-section.seguranca {
+  position: relative; /* Necessário para o posicionamento absoluto dos ícones */;
+  left: 60px; /* Ajustar a margem esquerda para mover a seção para a direita */
+}
+
+.footer-section.seguranca img {
+  width: 100px; /* Ajustar a largura do ícone */
+  height: auto; /* Ajustar a altura do ícone */
+  margin-right: 10px; /* Espaçamento entre os ícones */
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-section.seguranca img[alt="SSL"] {
+  width: 138px; /* Ajustar a largura do ícone SSL */
+  height: 85px; /* Ajustar a altura do ícone */
+}
+
+.footer-section.seguranca img:last-child {
+  margin-right: 0; /* Remover a margem direita do último ícone */
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: #0f0f0f;
+  font-family: 'Poppins', sans-serif;
+  width: 100%; /* Garantir que ocupe toda a largura da janela */
+}
+
+body {
+  overflow-x: hidden; /* Esconde qualquer conteúdo que exceda a largura da janela */
+}
+
+.rodape-links {
+  position: relative; /* Fixar na parte inferior da janela */
+  left: 25px;
+  bottom: -20px; /* Ajuste conforme necessário para ficar acima do .footer-bottom */
+  text-align: left; /* Alinhar o texto à esquerda */
+  width: 47%; /* Garantir que ocupe toda a largura disponível */
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #000000; /* Adicionar um fundo para garantir visibilidade */
+  z-index: 500; /* Garantir que fique acima de outros elementos */
+  margin-top: 0px;
+  font-family: 'Popins', sans-serif;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.rodape-links ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.rodape-links ul li {
+  margin-bottom: 5px; /* Espaçamento entre os itens da lista */
+  position: relative; /* Necessário para a linha separadora */
+}
+
+.rodape-links ul li a {
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  font-size: 65px; /* Aumentar o tamanho da fonte */
+  display: inline; /* Garantir que o link ocupe toda a largura do item da lista */
+  width: auto; /* Ocupa toda a largura disponível */
+  text-shadow: 100px 1 1 #fff, 200px 1 1 #fff, 1 1px 1 #fff, 1 1px 1 #fff; /* Simular peso intermediário */
+}
+
+.rodape-links ul li a:hover {
+  text-decoration: none; /* Remover sublinhado ao passar o mouse */
+  color: #dbdbdb;
+}
+
+.rodape-links ul li::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px; /* Altura da linha separadora */
+  background-color: #fff; /* Cor da linha separadora */
+  position: absolute;
+  bottom: 3px; /* Ajustar a posição da linha separadora */
+  left: 0;
+}
+
+.contato-section {
+  position: relative;
+  left: 75px;
+}
+
+.footer {
+  position: relative;
+  left: 25px;
+}
+
+.endereco {
+   white-space: nowrap;
 }

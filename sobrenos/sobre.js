@@ -11,11 +11,12 @@ if (checkCookie !== -1) {
 
 // Ao clicar no botão de aceitar
 acceptBtn.onclick = () => {
-    document.cookie = "CookieAccepted=true; max-age=" + 60 * 60 * 24 * 30; // Cria um cookie que expira em 30 dias
+    document.cookie = "CookieAccepted=true; max-age=" + 60 * 60 * 24 * 30 + "; path=/"; // Cria um cookie que expira em 30 dias e é acessível em todas as páginas
     cookieBox.classList.add("hide"); // Oculta o pop-up
 };
-// COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
 
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
 });
+// COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
