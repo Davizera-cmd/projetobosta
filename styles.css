@@ -472,6 +472,11 @@ header a:hover {
 }
 
 /* COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+
+.cookie-hidden {
+    display: none;
+}
+
 .cookieWrapper {
     position: fixed;
     bottom: 30px;

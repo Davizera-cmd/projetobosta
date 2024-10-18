@@ -55,6 +55,8 @@ let checkCookie = document.cookie.indexOf("CookieAccepted=true");
 
 if (checkCookie !== -1) {
     cookieBox.classList.add("hide"); // Oculta o pop-up se o cookie estiver presente
+} else {
+    document.querySelector(".cookie-hidden").classList.remove("cookie-hidden"); // Mostra o pop-up se o cookie não estiver presente
 }
 
 // Ao clicar no botão de aceitar
