@@ -104,6 +104,27 @@ header a:hover {
     margin-bottom: 20px; /* Ajuste este valor conforme necessário */
 }
 
+.whatsapp-icon {
+  position: fixed;
+  bottom: 15px;
+  right: 13px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+}
+
+.whatsapp-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img:hover {
+  transform: scale(1.1);
+}
+
 /* COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
 .cookieWrapper {
     position: fixed;
@@ -116,6 +137,7 @@ header a:hover {
     box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
     text-align: center;
     border: 3px solid #FCBA7F;
+    z-index: 9999;
   }
 
   .cookieWrapper h2 {
