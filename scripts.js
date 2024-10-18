@@ -75,10 +75,19 @@ function closePopup() {
     }, { once: true });
 }
 
+// Evento de clique fora do pop-up
+window.addEventListener('click', function(event) {
+    const popup = document.getElementById('popup-compra');
+    if (event.target === popup) {
+        closePopup();
+    }
+});
+
 // Função para abrir o pop-up com animação e selecionar o tamanho "P" por padrão
 function openPopup(name, price, image) {
     const popup = document.getElementById('popup-compra');
     const popupContent = document.querySelector('.popup-content');
+    popup.classList.remove('hidden');
     popup.style.display = 'flex';
     document.querySelector('.popup-details h2').textContent = name;
     document.querySelector('.popup-details p').textContent = price;
@@ -105,7 +114,7 @@ function selecionarTamanho(tamanho) {
 
 // Fechar o pop-up ao carregar a página
 window.addEventListener('load', function() {
-    closePopup();
+    document.getElementById('popup-compra').classList.add('hidden');
 });
 
 // Abrindo o pop-up ao clicar no botão "Comprar"

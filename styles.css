@@ -781,6 +781,10 @@ body {
     }
 }
 
+.popup.hidden {
+    display: none; /* Oculta o pop-up */
+}
+
 .popup-content {
     background-color: #fff;
     padding: 20px;
