@@ -1,0 +1,677 @@
+/* Remove margens e paddings padrão do body */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    padding-top: 51px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 102px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3b231b;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Ajuste da logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100%;
+    height: 100px;
+    width: auto;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    margin-left: 40px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.user-options {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    left: -20px;
+}
+
+.user-options a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ccc;
+}
+
+.product-images {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.product-image {
+    width: 750px;
+    height: 750px;
+    object-fit: cover;
+}
+
+.product-details {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-title {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-price {
+    font-size: 25px;
+    color: #000000;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.installments {
+    font-size: 14px;
+    margin-bottom: -3px;
+    font-family: 'Poppins', sans-serif;
+    color: #d89066;
+    ;
+}
+
+.shipping-info {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.frete-info {
+    margin-top: 20px;
+}
+
+
+.size-selection {
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tamanho {
+    margin-bottom: 5px;
+}
+
+.guia {
+    margin-bottom: 18px;
+}
+
+.size-options {
+    display: flex;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.size-option {
+    padding: 5px 5px;
+    border: none;
+    box-shadow: 0 0 0 0.5px #6e6e6e;
+    border-radius: 0px;
+    font-size: 12px;
+    width: 29px;
+    height: 28px;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.size-option:hover {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #c4c2c2;
+}
+
+.size-option.selected {
+    background-color: #c76a48;
+    border-color: #e49c73;
+}
+
+.quantity-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b231b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-selection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0px;
+    background-color: #3b231b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-button:hover {
+    background-color: #e49c73;
+}
+
+.decrement,
+.increment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buy-button {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 13px;
+    flex-grow: 1;
+    height: 40px;
+    background-color: #3b231b;
+    transition: background-color 0.3s;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buy-button:hover {
+    background-color: #e49c73;
+    font-family: 'Poppins', sans-serif;
+}
+
+.shipping-method {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cep-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.calculate-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    background-color: #3b231b;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.calculate-button:hover {
+    background-color: #e49c73;
+    font-family: 'Poppins', sans-serif;
+}
+
+.unknown-cep {
+    display: block;
+    margin-top: 10px;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.product-description {
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-description p {
+    font-size: 14px;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 490px;
+    left: 1700px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.product-title,
+.product-price,
+.installments,
+.shipping-info,
+.size-selection,
+.quantity-selection {
+    white-space: nowrap;
+}
+
+.size-option.selected {
+    background-color: #e2e0e0;
+    color: rgb(0, 0, 0);
+    border-color: #000000;
+    border: none;
+    box-shadow: 0 0 0 0.7px hsl(0, 0%, 0%);
+}
+
+.size-guide {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.product-image3 {
+    position: absolute;
+    top: 600px;
+    left: 750px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: auto;
+    width: 750px;
+    cursor: pointer;
+}
+
+.product-image4 {
+    position: absolute;
+    top: 600px;
+    left: 375px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: auto;
+    width: 750px;
+    cursor: pointer;
+}
+
+/* Modal para visualização em tela cheia */
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 101;
+    font-family: 'Nome da Fonte', sans-serif;
+    font-weight: bold;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+    animation: zoomInAndCenter 0.3s forwards;
+}
+
+.modal.hide .modal-content {
+    animation: zoomOutAndCenter 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes zoomInAndCenter {
+    from {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes zoomOutAndCenter {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+.grab {
+    cursor: grab;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #000000;
+    color: #fff;
+    padding: 30px 0;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-section {
+    width: 100%;
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section.siga-nos {
+    display: block;
+    text-align: center;
+    margin-left: -40px;
+}
+
+.footer-section.siga-nos h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section.siga-nos a img {
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 50px;
+    height: auto;
+}
+
+.footer-section.siga-nos a[href*="instagram"] img {
+    margin-left: -5px;
+}
+
+.footer-section.siga-nos a[href*="facebook"] img {
+    margin-left: -9px;
+}
+
+.footer-section.siga-nos a img:last-child {
+    margin-right: 0px;
+}
+
+.footer-section.metodos-pagamento img {
+    margin-right: 3px;
+    vertical-align: middle;
+    width: 40px;
+    height: auto;
+}
+
+.footer-section.metodos-pagamento img:last-child {
+    margin-right: 0;
+}
+
+.footer-section.seguranca {
+    position: relative;
+    ;
+    left: 60px;
+}
+
+.footer-section.seguranca img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-section.seguranca img[alt="SSL"] {
+    width: 138px;
+    height: 85px;
+}
+
+.footer-section.seguranca img:last-child {
+    margin-right: 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #0f0f0f;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.rodape-links {
+    position: relative;
+    left: 25px;
+    bottom: -20px;
+    text-align: left;
+    width: 47%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: #000000;
+    z-index: 500;
+    margin-top: 0px;
+    font-family: 'Popins', sans-serif;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rodape-links ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.rodape-links ul li {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.rodape-links ul li a {
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    font-size: 65px;
+    display: inline;
+    width: auto;
+    text-shadow: 100px 1 1 #fff, 200px 1 1 #fff, 1 1px 1 #fff, 1 1px 1 #fff;
+}
+
+.rodape-links ul li a:hover {
+    text-decoration: none;
+    color: #dbdbdb;
+}
+
+.rodape-links ul li::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}
+
+.contato-section {
+    position: relative;
+    left: 75px;
+}
+
+.footer {
+    position: relative;
+    left: 25px;
+}
+
+.endereco {
+    white-space: nowrap;
+}
+
+.arrumar {
+    position: relative;
+    margin-top: 800px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 15px;
+    right: 13px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
