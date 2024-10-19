@@ -26,9 +26,6 @@ function prevBanner() {
 // Inicializa o primeiro banner
 showBanner(bannerIndex);
 
-// Remover eventos de arrasto
-// Não há necessidade de lidar com eventos de mouse ou toque
-
 // Pausar a animação ao passar o mouse
 const marquee = document.getElementById('marquee');
 

@@ -1,5 +1,6 @@
 /* Remove margens e paddings padrão do body */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     padding-top: 51px;
@@ -10,33 +11,38 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 102px; 
+    height: 102px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #3b231b; 
-    padding: 0 20px; /* Remover o padding superior para evitar espaçamento extra */
+    background-color: #3b231b;
+    padding: 0 20px;
     box-sizing: border-box;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 /* Ajuste da logo */
 .logo {
-    display: flex; /* Torna a logo um item flex */
-    align-items: center; /* Alinha verticalmente ao centro */
+    display: flex;
+
+    align-items: center;
+    
 }
 
 .logo img {
-    max-height: 100%; 
-    height: 100px; /* Ajuste a altura conforme necessário */
-    width: auto; 
-    margin: 0; /* Remover a margem para evitar deslocamento */
+    max-height: 100%;
+    height: 100px;
+   
+    width: auto;
+    margin: 0;
+    
 }
 
 .nav-links {
     display: flex;
-    gap: 20px; 
-    margin-left: -800px; /* Ajustar se necessário */
+    gap: 20px;
+    flex-grow: 1;
+    margin-left: 40px;
 }
 
 .nav-links a {
@@ -50,7 +56,7 @@ header {
     display: flex;
     gap: 15px;
     position: relative;
-    left: -20px;
+    left: 0px;
 }
 
 .user-options a {
@@ -61,7 +67,7 @@ header {
 }
 
 header a:hover {
-    color: #ccc; 
+    color: #ccc;
 }
 
 /* Estilo para o carrossel de banners */
@@ -75,43 +81,43 @@ header a:hover {
 
 .banner-carousel .carousel-slides {
     display: flex;
-    transition: transform 0.5s ease; 
-    user-select: none; 
+    transition: transform 0.5s ease;
+    user-select: none;
 }
 
 .banner-carousel .carousel-slides.dragging {
-    cursor: grabbing; 
+    cursor: grabbing;
 }
 
 .banner-carousel .carousel-slides img {
     width: 100vw;
     flex: none;
-    user-select: none; 
-    pointer-events: none; 
-    cursor: default; 
+    user-select: none;
+    pointer-events: none;
+    cursor: default;
 }
 
 /* Estilo das setas do carrossel de banners */
 .banner-carousel .carousel-btn {
-    position: absolute; 
-    top: 20px; 
-    right: 20px; 
-    background: none; 
-    border: none; 
-    font-size: 80px; 
-    color: rgb(0, 0, 0); 
-    cursor: pointer; 
-    z-index: 10; 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 10;
 }
 
 /* Para a seta da esquerda */
 .banner-carousel .carousel-btn.prev {
-    right: 130px; 
+    right: 130px;
 }
 
 /* Para a seta da direita */
 .banner-carousel .carousel-btn.next {
-    right: 20px; 
+    right: 20px;
 }
 
 /* Estilo para o carrossel de produtos */
@@ -121,13 +127,13 @@ header a:hover {
 }
 
 .product-carousel h2 {
-    text-align: center; 
-    margin: 0px 0; 
-    font-family: 'Poppins', sans-serif; 
-    font-size: 60px; 
-    font-weight: bold; 
-    color: #000000; 
-    padding-bottom: 0; 
+    text-align: center;
+    margin: 0px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -146,7 +152,7 @@ header a:hover {
 }
 
 .product-carousel .product-row {
-    display: flex; 
+    display: flex;
     gap: 23px;
 }
 
@@ -157,19 +163,20 @@ header a:hover {
 }
 
 .product-item img {
-    width: 350px; 
-    height: auto; 
+    width: 350px;
+    height: auto;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .product-link {
-    color: inherit; 
-    text-decoration: none; 
+    color: inherit;
+    text-decoration: none;
 }
 
-.product-link h3, .product-link p {
-    margin: 3px; 
+.product-link h3,
+.product-link p {
+    margin: 3px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -181,48 +188,49 @@ header a:hover {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Mantém o texto cinza quando o mouse está sobre o item */
+
 .product-carousel .product-item:hover h3 {
-    color: #808080; 
+    color: #808080;
 }
 
-/* Muda a cor do preço ao passar o mouse diretamente sobre o preço */
+
 .product-carousel .product-item:hover p {
-    color: #000000; 
+    color: #000000;
 }
 
 /* Estilo do botão "Comprar" */
 .product-carousel .buy-btn {
     margin-top: 15px;
     display: inline-block;
-    background-color: #3b231b; 
-    color: #ffffff; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    border-radius: 5px; 
+    background-color: #3b231b;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Muda a cor do botão "Comprar" apenas quando o mouse está diretamente sobre ele */
+
 .product-carousel .buy-btn:hover {
-    background-color: #b6542e; 
-    color: #ffffff; /* Mantém a cor do texto do botão branco */
+    background-color: #b6542e;
+    color: #ffffff;
+
 }
 
-/* Estilo das setas do carrossel de produtos */
+
 .carousel-controls {
     display: flex;
     justify-content: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .carousel-controls .carousel-btn {
     background: none;
     border: none;
     color: #ffffff;
-    font-size: 30px; 
-    margin: 0 10px; 
+    font-size: 30px;
+    margin: 0 10px;
 }
 
 .image-container {
@@ -231,84 +239,87 @@ header a:hover {
     overflow: hidden;
     position: relative;
     display: flex;
-    justify-content: center; /* Centraliza a imagem horizontalmente */
+    justify-content: center;
+  
 }
 
 /* Definição das imagens */
-.front-image, 
+.front-image,
 .back-image {
     width: 100%;
     height: auto;
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.3s ease-in-out; /* Transição suave para a opacidade */
+    transition: opacity 0.3s ease-in-out;
+   
 }
 
 /* Imagem de trás oculta inicialmente */
 .back-image {
-    opacity: 0; /* Oculta a imagem traseira inicialmente */
+    opacity: 0;
+
 }
 
 /* Troca de imagem apenas quando o mouse está sobre a imagem */
 .image-container:hover .front-image {
-    opacity: 0; /* Oculta a imagem frontal ao passar o mouse */
+    opacity: 0;
+    
 }
 
 .image-container:hover .back-image {
-    opacity: 1; /* Mostra a imagem traseira ao passar o mouse */
+    opacity: 1;
 }
 
-/* Adiciona a transição e o efeito de scale para a ampliação */
 .image-container img {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .product-item:hover .front-image,
 .product-item:hover .back-image {
-    transform: scale(1.08); /* Amplia a imagem em % */
+    transform: scale(1.08);
 }
 
 /* Estilo para a seção de imagens em grade */
 .image-grid {
     display: flex;
-    flex-wrap: wrap; /* Permite que as imagens se movam para a linha de baixo quando necessário */
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    margin: 10px 0; /* Margem acima e abaixo da seção */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .image-item {
-    flex: 0 0 45%; /* Largura de 45% para cada imagem */
-    margin: 10px; /* Margem entre as imagens */
-    text-align: center; /* Centraliza o conteúdo dentro de cada item */
+    flex: 0 0 45%;
+    margin: 10px;
+    text-align: center;
 }
 
 .image-item img {
-    width: 100%; /* Faz com que a imagem preencha todo o espaço do item */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Adiciona bordas arredondadas se desejar */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .marquee {
-    background-color: rgb(180, 86, 58); /* Cor de fundo laranja */
-    white-space: nowrap; /* Impede a quebra de linha */
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa o contêiner */
-    position: relative; /* Para o uso do efeito de animação */
-    height: 72px; /* Altura da faixa */
-    display: flex; /* Para alinhar os elementos em linha */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
+    background-color: rgb(180, 86, 58);
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
 }
 
 .marquee-content {
-    display: flex; /* Para alinhar os elementos em linha */
-    animation: marquee 45s linear infinite; /* Animação contínua */
+    display: flex;
+    animation: marquee 45s linear infinite;
 }
 
 .marquee span {
-    display: inline-block; /* Permite que a animação funcione corretamente */
-    padding: 0 20px; /* Espaço entre as frases */
-    font-size: 34px; /* Tamanho da fonte */
-    color: white; /* Cor do texto */
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 34px;
+    color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
@@ -316,21 +327,19 @@ header a:hover {
 /* Efeito de animação */
 @keyframes marquee {
     0% {
-        transform: translateX(0); /* Começa na posição inicial */
+        transform: translateX(0);
     }
+
     100% {
-        transform: translateX(-50%); /* Termina na metade do conteúdo */
+        transform: translateX(-50%);
     }
 }
 
-/* Para parar a animação ao passar o mouse */
 .marquee:hover .marquee-content {
-    animation-play-state: paused; /* Pausa a animação */
+    animation-play-state: paused;
 }
 
 /* SEÇÃO DAS ROUPAS*/
-
-/* Estilo para a seção "Para você" */
 .product-secao {
     margin: 20px 0;
     text-align: center;
@@ -359,16 +368,16 @@ header a:hover {
 }
 
 .secao-row {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     gap: 120px;
     justify-content: center;
 }
 
 .secao-item {
-    flex: 0 0 auto; /* Impede que os itens se estiquem */
-    text-align: center; /* Centraliza o texto do item */
-    position: relative; /* Para que o hover funcione apenas dentro do item */
+    flex: 0 0 auto;
+    text-align: center;
+    position: relative;
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
     margin-bottom: 0px;
@@ -376,78 +385,77 @@ header a:hover {
 
 .secao-container {
     position: relative;
-    width: 275px; /* Ajuste a largura conforme necessário */
-    height: 280px; /* Ajuste a altura conforme necessário */
-    overflow: hidden; /* Para esconder imagens que excedem o contêiner */
+    width: 275px;
+    height: 280px;
+    overflow: hidden;
 }
-/* Estilo das imagens */
+
 .front-image-secao,
 .back-image-secao {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que as imagens se ajustem sem cortar */
-    position: absolute; /* Para sobrepor as imagens uma sobre a outra */
+    object-fit: cover;
+    position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.2s ease, transform 0.6s ease;/* Transição suave para opacidade */
+    transition: opacity 0.2s ease, transform 0.6s ease;
 }
 
 
-/* Inicializa a imagem de fundo como invisível */
 .back-image-secao {
     opacity: 0;
 }
 
 .secao-item:hover .front-image-secao {
-    transform: scale(1.08); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.08);
 }
 
 .secao-item:hover .back-image-secao {
-    transform: scale(1.08); /* Efeito de zoom para a imagem de fundo também */
+    transform: scale(1.08);
 }
 
 .secao-container:hover .front-image-secao {
-    opacity: 0; /* Torna a imagem frontal invisível */
+    opacity: 0;
 }
 
 .secao-container:hover .back-image-secao {
-    opacity: 1; /* Torna a imagem de fundo visível */
+    opacity: 1;
 }
+
 .secaobuy-btn {
     font-size: 1.1rem;
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #3b231b; /* Cor do botão */
-    color: #ffffff; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #3b231b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
     border: none;
-    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+    transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .secaobuy-btn:hover {
-    background-color: #b6542e; /* Cor do botão ao passar o mouse */
+    background-color: #b6542e;
 }
 
-/* Remove a sublinha e define a cor para o texto do link */
 .secao-link {
-    text-decoration: none; /* Remove a sublinha */
-    color: inherit; /* Herda a cor do elemento pai */
+    text-decoration: none;
+    color: inherit;
 }
 
 .secao-link h3:hover {
-    color: gray; /* Define o título em cinza ao passar o mouse */
+    color: gray;
 }
 
 .secao-item:hover h3 {
     color: gray;
 }
 
-/* Ajuste o estilo do link quando o mouse passar por cima (opcional) */
 .secao-link:hover {
-    color: inherit; /* Mantém a cor ao passar o mouse */
-    text-decoration: none; /* Sem sublinha ao passar o mouse */
+    color: inherit;
+    text-decoration: none;
 }
 
 .whatsapp-icon {
@@ -485,51 +493,60 @@ header a:hover {
     background: #ffffff;
     padding: 25px 25px 30px 25px;
     border-radius: 15px;
-    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+    box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
     text-align: center;
     border: 3px solid #FCBA7F;
     z-index: 700;
-  }
+}
 
-  .cookieWrapper h2 {
-    margin-top: 5px; /* Reduza a margem superior */
-    margin-bottom: 5px; /* Mantenha uma margem inferior pequena */
-    font-size: 1.5em; /* Tamanho da fonte do título */
+.cookieWrapper h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
     font-family: 'Poppins', sans-serif;
 }
+
 .cookieWrapper p {
-    font-family: 'Poppins', sans-serif; /* Fonte do parágrafo */
+    font-family: 'Poppins', sans-serif;
 }
-  .cookieWrapper.hide {
+
+.cookieWrapper.hide {
     opacity: 0;
     pointer-events: none;
     transform: scale(0.8);
     transition: all 0.3s ease;
-  }
-  ::selection {
+}
+
+::selection {
     color: #fff;
     background: #FCBA7F;
-  }
-  .cookieWrapper img {
+}
+
+.cookieWrapper img {
     max-width: 90px;
-  }
-  .cookieContent header {
+}
+
+.cookieContent header {
     font-size: 25px;
     font-weight: 50;
-  }
-  .cookieContent {
+}
+
+.cookieContent {
     margin-top: 10px;
-  }
-  .cookieContent p {
+}
+
+.cookieContent p {
     color: #858585;
     margin: 5px 0 20px 0;
-  }
-  .cookieContent .cookieButtons {
+}
+
+.cookieContent .cookieButtons {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .cookieButtons button {
+}
+
+.cookieButtons button {
     padding: 10px 20px;
     border: none;
     outline: none;
@@ -540,27 +557,31 @@ header a:hover {
     background: #FCBA7F;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  .cookieButtons button:hover {
+}
+
+.cookieButtons button:hover {
     transform: scale(0.97);
-  }
-  .cookieButtons .cookieItem {
+}
+
+.cookieButtons .cookieItem {
     margin: 0 10px;
-  }
-  .cookieButtons a {
+}
+
+.cookieButtons a {
     color: #FCBA7F;
     font-family: 'Poppins', sans-serif;
-  }
-  /* COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
-  
-  footer {
-    display: flex; /* Usar Flexbox para alinhar os elementos */
-    justify-content: space-between; /* Espaçar os elementos */
-    align-items: flex-start; /* Alinhar os elementos ao topo */
+}
+
+/* COOKIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     background-color: #000000;
     color: #fff;
     padding: 30px 0;
-    position: relative; /* Necessário para posicionamento absoluto dos filhos */
+    position: relative;
 }
 
 .footer-container {
@@ -581,64 +602,66 @@ header a:hover {
 }
 
 .footer-section.siga-nos {
-    display: block; /* Garantir que o título e os ícones fiquem em blocos separados */
-    text-align: center; /* Centralizar o conteúdo */
+    display: block;
+    text-align: center;
     margin-left: -40px;
 }
 
 .footer-section.siga-nos h4 {
-    margin-bottom: 10px; /* Espaçamento entre o título e os ícones */
+    margin-bottom: 10px;
 }
 
 .footer-section.siga-nos a img {
-    margin-right: 10px; /* Reduzir a margem direita para aproximar os ícones */
-    vertical-align: middle; /* Alinhar verticalmente os ícones ao meio */
-    width: 50px; /* Ajustar a largura do ícone */
-    height: auto; /* Ajustar a altura do ícone */
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 50px;
+    height: auto;
 }
 
 .footer-section.siga-nos a[href*="instagram"] img {
-    margin-left: -5px; /* Mover o ícone do Instagram um pouco para a esquerda */
+    margin-left: -5px;
 }
+
 .footer-section.siga-nos a[href*="facebook"] img {
-    margin-left: -9px; /* Mover o ícone do Instagram um pouco para a esquerda */
+    margin-left: -9px;
 }
 
 .footer-section.siga-nos a img:last-child {
-    margin-right: 0px; /* Remover a margem direita do último ícone */
+    margin-right: 0px;
 }
 
 .footer-section.metodos-pagamento img {
-    margin-right: 3px; /* Reduzir a margem direita para aproximar os ícones */
-    vertical-align: middle; /* Alinhar verticalmente os ícones ao meio */
+    margin-right: 3px;
+    vertical-align: middle;
     width: 40px;
     height: auto;
 }
 
 .footer-section.metodos-pagamento img:last-child {
-    margin-right: 0; /* Remover a margem direita do último ícone */
+    margin-right: 0;
 }
 
 .footer-section.seguranca {
-    position: relative; /* Necessário para o posicionamento absoluto dos ícones */;
-    left: 60px; /* Ajustar a margem esquerda para mover a seção para a direita */
+    position: relative;
+    ;
+    left: 60px;
 }
 
 .footer-section.seguranca img {
-    width: 100px; /* Ajustar a largura do ícone */
-    height: auto; /* Ajustar a altura do ícone */
-    margin-right: 10px; /* Espaçamento entre os ícones */
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
     display: block;
     margin-bottom: 5px;
 }
 
 .footer-section.seguranca img[alt="SSL"] {
-    width: 138px; /* Ajustar a largura do ícone SSL */
-    height: 85px; /* Ajustar a altura do ícone */
+    width: 138px;
+    height: 85px;
 }
 
 .footer-section.seguranca img:last-child {
-    margin-right: 0; /* Remover a margem direita do último ícone */
+    margin-right: 0;
 }
 
 .footer-section h4 {
@@ -674,23 +697,23 @@ header a:hover {
     color: white;
     background-color: #0f0f0f;
     font-family: 'Poppins', sans-serif;
-    width: 100%; /* Garantir que ocupe toda a largura da janela */
+    width: 100%;
 }
 
 body {
-    overflow-x: hidden; /* Esconde qualquer conteúdo que exceda a largura da janela */
+    overflow-x: hidden;
 }
 
 .rodape-links {
-    position: relative; /* Fixar na parte inferior da janela */
+    position: relative;
     left: 25px;
-    bottom: -20px; /* Ajuste conforme necessário para ficar acima do .footer-bottom */
-    text-align: left; /* Alinhar o texto à esquerda */
-    width: 47%; /* Garantir que ocupe toda a largura disponível */
+    bottom: -20px;
+    text-align: left;
+    width: 47%;
     max-width: 100vw;
     overflow-x: hidden;
-    background-color: #000000; /* Adicionar um fundo para garantir visibilidade */
-    z-index: 500; /* Garantir que fique acima de outros elementos */
+    background-color: #000000;
+    z-index: 500;
     margin-top: 0px;
     font-family: 'Popins', sans-serif;
     padding: 0px;
@@ -709,22 +732,22 @@ body {
 }
 
 .rodape-links ul li {
-    margin-bottom: 5px; /* Espaçamento entre os itens da lista */
-    position: relative; /* Necessário para a linha separadora */
+    margin-bottom: 5px;
+    position: relative;
 }
 
 .rodape-links ul li a {
     font-weight: 500;
     color: #fff;
     text-decoration: none;
-    font-size: 65px; /* Aumentar o tamanho da fonte */
-    display: inline; /* Garantir que o link ocupe toda a largura do item da lista */
-    width: auto; /* Ocupa toda a largura disponível */
-    text-shadow: 100px 1 1 #fff, 200px 1 1 #fff, 1 1px 1 #fff, 1 1px 1 #fff; /* Simular peso intermediário */
+    font-size: 65px;
+    display: inline;
+    width: auto;
+    text-shadow: 100px 1 1 #fff, 200px 1 1 #fff, 1 1px 1 #fff, 1 1px 1 #fff;
 }
 
 .rodape-links ul li a:hover {
-    text-decoration: none; /* Remover sublinhado ao passar o mouse */
+    text-decoration: none;
     color: #dbdbdb;
 }
 
@@ -732,10 +755,10 @@ body {
     content: '';
     display: block;
     width: 100%;
-    height: 1px; /* Altura da linha separadora */
-    background-color: #fff; /* Cor da linha separadora */
+    height: 1px;
+    background-color: #fff;
     position: absolute;
-    bottom: 3px; /* Ajustar a posição da linha separadora */
+    bottom: 3px;
     left: 0;
 }
 
@@ -750,19 +773,19 @@ body {
 }
 
 .endereco {
-     white-space: nowrap;
+    white-space: nowrap;
 }
 
 /* Estilos para o pop-up */
 .popup {
-    display: none; /* Esconde o pop-up por padrão */
-    position: fixed; /* Fixa o pop-up na tela */
-    z-index: 1000; /* Garante que o pop-up fique acima de outros elementos */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -772,6 +795,7 @@ body {
     from {
         transform: translateY(200%);
     }
+
     to {
         transform: translateY(0);
     }
@@ -781,13 +805,14 @@ body {
     from {
         transform: translateY(0);
     }
+
     to {
         transform: translateY(200%);
     }
 }
 
 .popup.hidden {
-    display: none; /* Oculta o pop-up */
+    display: none;
 }
 
 .popup-content {
@@ -817,16 +842,16 @@ body {
 .popup-image {
     width: 100%;
     margin-left: -15px;
-    max-width: 430px; /* Ajuste conforme necessário */
+    max-width: 430px;
     height: auto;
-    user-select: none; /* Impedir a seleção da imagem */
+    user-select: none;
 }
 
 .popup-details {
     flex: 1;
     text-align: left;
-    margin-bottom: 35px; /* Adicionar margem inferior */
-    margin-top: 0; /* Remover a margem superior */
+    margin-bottom: 35px;
+    margin-top: 0;
 }
 
 .popup-details h2 {
@@ -864,6 +889,7 @@ body {
     border: 1px solid rgb(207, 206, 206);
     transition: background-color 0.3s, border-color 0.6s, color 0.3s;
 }
+
 .tamanho-options button.selected {
     background-color: rgb(236, 235, 235);
     color: rgb(0, 0, 0);
@@ -872,11 +898,11 @@ body {
 }
 
 .tamanho-options label {
-    font-size: 0.750rem; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 0.750rem;
 }
 
 #tamanho-selecionado {
-    font-size: 0.750rem; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 0.750rem;
 }
 
 .qty-selector {
@@ -889,13 +915,14 @@ body {
     background-color: #3b231b;
     border: none;
     padding: 15px 17px;
-    cursor: pointer; 
+    cursor: pointer;
     color: white;
-    transition: background-color 0.3s ease; /* Adicionar transição suave */
+    transition: background-color 0.3s ease;
 }
 
 .qty-selector button:hover {
-    background-color: #e49c73;; /* Mudar a cor para cinza ao passar o mouse */
+    background-color: #e49c73;
+    ;
 }
 
 .qty-selector input {
@@ -908,7 +935,7 @@ body {
 }
 
 .qty-selector .compra-btn {
-    margin-left: 10px; /* Espaçamento à esquerda do botão */
+    margin-left: 10px;
     background-color: #3b231b;
     color: white;
     padding: 10px 55px;
@@ -916,7 +943,7 @@ body {
     cursor: pointer;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
-    transition: background-color 0.3s; /* Adicionar transição suave */
+    transition: background-color 0.3s;
 }
 
 .qty-selector .compra-btn:hover {
@@ -940,3 +967,69 @@ body {
 .bold {
     font-weight: bold;
 }
+
+@keyframes shine {
+    0% {
+        background-position: -400%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+.golden-text h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #4B0082;
+    background: linear-gradient(90deg, #8A2BE2, #DA70D6, #8A2BE2);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.secao-link:hover .golden-text h3,
+.secao-link:hover .shiny-price + .golden-text h3,
+.secao-link:hover .secao-container + .golden-text h3 {
+    background: linear-gradient(90deg, #5A189A, #9D4EDD, #5A189A);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+.shiny-price {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #8A2BE2;
+    background: linear-gradient(90deg, #8A2BE2, #DA70D6, #8A2BE2);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    transition: color 0.3s ease;
+}
+
+.special-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #8A2BE2, #DA70D6, #8A2BE2);
+    background-size: 200%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; 
+    cursor: pointer;
+    animation: shine 3s linear infinite;
+    transition: background-position 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.special-button:hover {
+    background-position: 200%;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.7), 0 0 30px rgba(218, 112, 214, 0.7); 
+}
+
